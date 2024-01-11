@@ -104,7 +104,7 @@ FROM(
     WHERE product_category = 'Phone'    
 ) subquery;
 
--- Using WINDOW clause in queries
+-- WINDOW clause 
 -- Find the 2nd most expensive product and the least expensive product under each category
 SELECT *,
     NTH_VALUE(product_name, 2) OVER w AS 2nd_most_exp_product,
